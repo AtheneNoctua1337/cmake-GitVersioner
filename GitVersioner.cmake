@@ -151,7 +151,7 @@ function (git_versioner_get_version RESULT_VAR)
 
         # Get current branch
         execute_process (
-            COMMAND ${GIT_EXECUTABLE} symbolic-ref --short -q HEAD
+            COMMAND ${GIT_EXECUTABLE} branch --show-current
 
             RESULT_VARIABLE PROCESS_RESULT
             OUTPUT_VARIABLE PROCESS_OUTPUT
